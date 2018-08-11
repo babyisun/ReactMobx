@@ -1,0 +1,48 @@
+.home {
+  background-color: #fff;
+  border-radius: 8px;
+  .welcome {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    text-align: center;
+    width: 100%;
+    header {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 120px;
+      margin-bottom: 80px;
+      h2, p {
+        margin-bottom: 0;
+      }
+      h2 {
+        font-size: 48px;
+        color: #1890ff;
+      }
+      p {
+        font-size: 20px;
+        color: #999;
+      }
+    }
+    .img {
+      width: 50vw;
+      height: 33vw;
+      background-image: url('@/assets/common/welcome.png');
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  }
+}
+/* .home-guide {
+  .welcome {
+    header {
+      align-items: flex-start;
+      margin-left: 80px;
+      margin-right: auto;
+    }
+  }
+} */

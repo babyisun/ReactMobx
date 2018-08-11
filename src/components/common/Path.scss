@@ -1,0 +1,13 @@
+$primary-color: #4768fd;
+.path {
+    // margin-bottom: 12px;
+    :global {
+        span {
+            >.ant-breadcrumb-link {
+                a:hover {
+                    color: $primary-color;
+                }
+            }
+        }
+    }
+}

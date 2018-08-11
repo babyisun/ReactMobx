@@ -1,0 +1,55 @@
+.sub-title {
+    width: 100%;
+    height: 30px;
+    background: #eee;
+    padding-left: 5px;
+    line-height: 30px;
+}
+.form-box {
+    padding: 5px 0 10px 0;
+    .form-item {
+        margin: 7px 20px;
+        position: relative;
+        label {
+            width: 100px;
+            display: inline-block;
+            text-align: left;
+        }
+        div {
+            input {
+                height: 30px;
+                width: 250px;
+            }
+            .ele-left {
+                height: 30px;
+                width: 200px;
+            }
+            
+        }
+        :global {
+            .ant-form-explain {
+                font-size: 12px;
+                margin-top: -1px;
+                //display: inline-block;
+               
+            }
+            .ant-select-selection__rendered {
+                width: 200px;
+            }
+            .ant-input {
+                font-size: 12px;
+            }
+            .ant-select-selection--single {
+                height: 30px;
+                //width: 200px;
+            }
+            .ant-select-selection__rendered {
+                line-height: 30px
+            }
+        }
+    }
+}
+
+.button-box {
+    text-align: center;
+}

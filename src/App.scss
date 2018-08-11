@@ -1,0 +1,62 @@
+// @import '@/resources/font_antd/iconfont.css';
+
+// @import '@/index.css';
+
+:global {
+    #root {
+        // ant design
+        .ant-calendar-range-picker-separator {
+            line-height: 28px;
+        }
+        .ant-pagination-item-active {
+            background: #1890ff;
+        }
+        .ant-pagination-item-active a {
+            color: #fff;
+        }
+        .ant-select-dropdown-menu {
+            .ant-select-dropdown-menu-item {
+                line-height: 30px;
+                &.ant-select-dropdown-menu-item-selected {
+                    color: #fff;
+                    background: #1890ff;
+                }
+            }
+        }
+        .ant-divider-horizontal {
+            margin: 10px 0;
+        }
+        .page-header {
+            margin-bottom: 15px;
+        }
+        .ant-table-tbody {
+            background: #fff;
+        } // 分页
+        .ant-table-pagination {
+            margin: 0 auto;
+            margin-top: 30px;
+            float: none;
+            text-align: center;
+            .ant-pagination-item,
+            .ant-pagination-item-link {
+                border-radius: 2px;
+            }
+        }
+        .icon-btn{
+            color: rgb(172, 169, 169);
+            font-size: 18px;
+        }
+        .green {
+            color: green;
+        }
+        .red {
+            color: red;
+        }
+        .yellow {
+            color: yellow;
+        }
+        .disabled {
+            color: #ccc;
+        }
+    }
+}

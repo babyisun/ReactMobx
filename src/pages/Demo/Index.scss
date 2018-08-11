@@ -1,0 +1,18 @@
+.demo {
+  :global {
+    .ant-row {
+      .ant-btn {
+        .anticon-plus-circle-o {
+          margin-right: 10px;
+        }
+        + .ant-btn {
+          margin-left: 24px;
+        }
+      }
+    }
+    .ant-alert {
+      margin-top: 24px;
+      margin-bottom: 24px;
+    }
+  }
+}

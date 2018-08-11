@@ -1,0 +1,113 @@
+.loading {
+    $shadow: rgba(#000, .05);
+    $row-height: 110px;
+    $circle-diameter: 70px;
+    $circle-radius: $circle-diameter / 2;
+    $bar-height: 15px;
+    $bar-margin-left: 20px;
+    $bar-margin-vertical: 10px;
+    $bottom-bar-to-top: $circle-diameter - $bar-margin-vertical - $bar-height;
+    &::before {
+        content: '';
+        display: block;
+        height: $row-height * 4;
+        background-image: linear-gradient(100deg, rgba(#fff, 0), rgba(#fff, .2) 50%, rgba(#fff, 0) 80%), // highlight
+        linear-gradient($shadow $bar-height, transparent 0), linear-gradient($shadow $bar-height, transparent 0);
+        background-size: $circle-diameter + $bar-margin-left $row-height, // highlight
+        100% $row-height, 70% $row-height;
+        background-position: 0 0, // highlight
+        0 $bar-margin-vertical, 0 $bottom-bar-to-top;
+        animation: no-circle-shine 1s infinite;
+        @keyframes no-circle-shine {
+            to {
+                background-position: 100% 0, // highlight
+                0 $bar-margin-vertical, 0 $bottom-bar-to-top;
+            }
+        }
+    }
+    &.circle {
+        &::before {
+            background-image: radial-gradient(circle $circle-radius at $circle-radius $circle-radius, $shadow 100%, transparent 0), linear-gradient(100deg, rgba(#fff, 0), rgba(#fff, .5) 50%, rgba(#fff, 0) 80%), // highlight
+            linear-gradient($shadow $bar-height, transparent 0), linear-gradient($shadow $bar-height, transparent 0);
+            background-repeat: repeat-y;
+            background-size: $circle-diameter $row-height, $circle-diameter + $bar-margin-left $row-height, // highlight
+            100% $row-height, 70% $row-height;
+            background-position: 0 0, 0 0, // highlight
+            $circle-diameter + $bar-margin-left $bar-margin-vertical, $circle-diameter + $bar-margin-left $bottom-bar-to-top;
+            animation: shine 1s infinite;
+            @keyframes shine {
+                to {
+                    background-position: 0 0, 100% 0, // highlight
+                    $circle-diameter + $bar-margin-left $bar-margin-vertical, $circle-diameter + $bar-margin-left $bottom-bar-to-top;
+                }
+            }
+        }
+    }
+}
+
+.message {
+    position: absolute;
+    top: 0;
+    bottom: 20vh;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    h2 {
+        margin-bottom: 0;
+        color: rgba(#000, .1);
+        font-size: 120px;
+        text-shadow: 0 5px 20px rgba(#000, .05);
+        letter-spacing: 2px;
+    }
+}
+
+.redirect {
+    h2 {
+        font-size: 100px;
+    }
+    a {
+        margin-top: 30px;
+    }
+}
+
+.loadCircle {
+    &.circle,
+    &.text {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &.circle {
+        span {
+            text-indent: -9999px;
+        }
+        &::after {
+            content: '';
+            margin-top: -20px;
+            width: 2px;
+            height: 2px;
+            border-radius: 50%;
+            background: transparent;
+            box-shadow: 0 -10px 0 #ccc, 10px 0 0 #ccc, 0 10px 0 #ccc, -10px 0 0 #ccc, -7px -7px 0 #ccc, 7px -7px 0 #ccc, 7px 7px 0 #ccc, -7px 7px 0 #ccc;
+            :local {
+                animation: loading-circle 1.5s linear infinite;
+                @keyframes loading-circle {
+                    from {
+                        transform: scale(3) rotateZ(0deg);
+                    }
+                    to {
+                        transform: scale(3) rotateZ(360deg);
+                    }
+                }
+            }
+        }
+    }
+}
