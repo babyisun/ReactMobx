@@ -2,6 +2,17 @@
 
 > ReactMobx最佳实践
 
+## 项目简介
+
+本项目为 React 项目，使用 [Create React App](https://github.com/facebook/create-react-app) 搭建，使用到的技术栈为：
+
+* [React](https://reactjs.org/)
+* [Ant Design](https://ant.design/docs/react/introduce-cn)
+* [Mobx](https://cn.mobx.js.org/)
+* [React Router 4](https://github.com/ReactTraining/react-router)
+* [Sass](https://github.com/webpack-contrib/sass-loader)
+* [CSS Modules](https://github.com/css-modules/css-modules)
+* [webpack](https://webpack.docschina.org/concepts/)
 
 ## 开发构建
 
@@ -24,7 +35,7 @@
 
 说明：每个人新建自己的分支
 
-`git clone -b dev http://gitlab.sftcwl.com/fe/saas-agent.git`
+`git clone -b dev http://gitlab.sftcwl.com/fe/ReactMobx.git`
 
 `git checkout -b ${yourname}`
 
@@ -102,3 +113,55 @@ git checkout ${ME}
 └── yarn.lock
 ```
 
+## 命名规范
+
+组件以 [PascalCase](https://baike.baidu.com/item/PascalCase) 命名，文件夹中的组件与其 `.scss` 样式文件名称一致，同样以 PascalCase 命名，放置在文件夹第一层。
+
+页面自有的组件文件夹命名为 `components`（复数，小写），`pages`（复数，小写），`store` 文件夹为pages对应的modal文件。
+ 
+页面用到的图片等资源文件（`resources`）、工具函数（`utils`）等，均放置在 `src` 下建公共目录。
+
+总之，遵循公共组件放置在公共位置，自有组件自组织的原则。
+
+Good:
+
+```
+src
+  pages
+    pageA
+      components
+        ComponentA.jsx
+        ComponentA.scss
+        ComponentB.jsx
+        ComponentB.scss
+      ListPage.jsx
+      ListPage.scss
+      ItemPage.jsx
+      ItemPage.scss
+    pageB
+      ListPage.jsx
+      ListPage.scss
+      ItemPage.jsx
+      ItemPage.scss
+```
+
+Bad:
+
+```
+src
+  pages
+    PageA
+      Utils     //放置在公共区域
+      ListPage // 文件夹字母小写
+        index.jsx //首字母大写
+        index.scss  //首字母大写
+      itemPage
+        Index.jsx
+        style.scss  //对应为Index.scss
+      ListPage.jsx
+      itemPage.jsx // 应使用 PascalCase
+```
+├── theme.js  --antd的主题文件
+├── yarn-error.log
+└── yarn.lock
+```
