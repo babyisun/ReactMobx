@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Button, Form, Row, Col, Divider } from 'antd';
-import styles from "./Filter.scss";
+import styles from './Filter.scss';
 
 /*
 * Form
@@ -14,18 +14,18 @@ import styles from "./Filter.scss";
 const FormItem = Form.Item;
 
 class Filter extends Component {
-
   // 表单提交
   onSubmit = (e, action) => {
     e.preventDefault();
     const { form: { validateFields }, formatParams, onSearch, onExport } = this.props;
     validateFields((err, values) => {
+      let vals = values;
       if (!err) {
-        formatParams && (values = formatParams(values));
-        if (action === "onSearch") {
-          onSearch(values);
+        formatParams && (vals = formatParams(vals));
+        if (action === 'onSearch') {
+          onSearch(vals);
         } else {
-          const exprotParams = { ...values, ...{ export: 1 } };
+          const exprotParams = { ...vals, ...{ export: 1 } };
           delete exprotParams.page;
           delete exprotParams.page_size;
           onExport(exprotParams);
@@ -38,7 +38,7 @@ class Filter extends Component {
     const {
       fields,
       form,
-      isExport = true
+      isExport = true,
     } = this.props;
 
     const { getFieldDecorator } = form;
@@ -62,19 +62,21 @@ class Filter extends Component {
           <Row gutter={24} justify="center">
             <Col className={styles.FilterFormBtn}>
               <FormItem>
-                <Button type="primary" htmlType="submit" icon='search' label="&nbsp;">
+                <Button type="primary" htmlType="submit" icon="search" label="&nbsp;">
                   搜索
-              </Button>
-                {isExport && <Button icon='download' onClick={(e) => this.onSubmit(e, 'onExport')}>
+                </Button>
+                {isExport && (
+                <Button icon="download" onClick={(e) => this.onSubmit(e, 'onExport')}>
                   导出
-              </Button>}
+                </Button>
+                )}
               </FormItem>
             </Col>
           </Row>
         </Form>
         <Divider />
       </div>
-    )
+    );
   }
 }
 

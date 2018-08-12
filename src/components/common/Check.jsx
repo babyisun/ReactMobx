@@ -1,17 +1,17 @@
-import React, { Component, Fragment } from 'react'
+import React, { Component, Fragment } from 'react';
 import {
-    inject
-} from "mobx-react";
+  inject,
+} from 'mobx-react';
 
-@inject("baseStore")
+@inject('baseStore')
 class Check extends Component {
   render() {
-    const {children,baseStore,privilegeID} = this.props;
+    const { children, baseStore, privilegeID } = this.props;
     return (
       <Fragment>
-          {baseStore.privilege && baseStore.privilege.indexOf(+privilegeID) >= 0&&children}
+        {baseStore.privilege && baseStore.privilege.indexOf(+privilegeID) >= 0 && children}
       </Fragment>
-    )
+    );
   }
 }
 export default Check;

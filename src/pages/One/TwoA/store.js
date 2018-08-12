@@ -1,4 +1,8 @@
-import { observable, action, runInAction } from 'mobx';
+import {
+  observable,
+  action,
+  runInAction,
+} from 'mobx';
 import BaseStroe from '@/stores/BaseStore';
 import ajax from '@/utils/ajax';
 import {
@@ -6,9 +10,9 @@ import {
 } from 'antd';
 
 class TwoA extends BaseStroe {
-//   constructor() {
-//     super();
-//   }
+    //   constructor() {
+    //     super();
+    //   }
 
     // 分页参数
     @observable pagination = {
@@ -35,7 +39,7 @@ class TwoA extends BaseStroe {
 
     @observable dataDetail = {};
 
-    @observable total = 0;
+    @observable total = 10010;
 
     @action load = async () => {
       this.loading = true; // 开启loading动画（render触发一次）
@@ -76,28 +80,28 @@ class TwoA extends BaseStroe {
     }
 
     // 查询后加载数据
-  @action.bound onSearch(values) {
+    @action.bound onSearch(values) {
       this.pagination.page = 1; // 初始化到第一页
       this.query = values; // 注入查询参数
       this.load();
     }
 
     // 分页后查询
-  @action.bound onPageChange(page, page_size) {
-    this.pagination.page = page;
-    this.pagination.page_size = page_size;
-    this.load();
-  }
+    @action.bound onPageChange(page, page_size) {
+      this.pagination.page = page;
+      this.pagination.page_size = page_size;
+      this.load();
+    }
 
-  // 方法
-  @action.bound setAgentModalVisable(value) {
-    this.agentModalVisable = value;
-  }
+    // 方法
+    @action.bound setAgentModalVisable(value) {
+      this.agentModalVisable = value;
+    }
 
-  @action.bound setDetailModalVisable(value, agentid) {
-    this.detailModalVisable = value;
-    if (value) this.loadDetail(agentid);
-  }
+    @action.bound setDetailModalVisable(value, agentid) {
+      this.detailModalVisable = value;
+      if (value) this.loadDetail(agentid);
+    }
 
     // 创建
     @action onCreate = async (values) => {
@@ -134,5 +138,5 @@ class TwoA extends BaseStroe {
       }
     }
 }
-
-export default new TwoA();
+const store = new TwoA();
+export default store;

@@ -135,4 +135,5 @@ class TwoB extends BaseStroe {
     }
 }
 
-export default new TwoB();
+const store = new TwoB();
+export default store;
