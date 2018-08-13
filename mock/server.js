@@ -3,7 +3,7 @@ const MockJS = require('mockjs');
 const config = require('./config');
 
 const app = express();
-const port = 3001;
+const port = 8888;
 
 Object.keys(config).forEach(key => {
     const api = key.split(' ');

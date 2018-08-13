@@ -6,10 +6,10 @@ const Home = () => (
     <div className={styles.welcome}>
       <header>
         <h2 key="title">
-          顺丰 SAAS
+          这是一个主页
         </h2>
         <p key="desc">
-          让门店经营更简单
+          主页是一个无状态组件
         </p>
       </header>
       <div className={styles.img} />

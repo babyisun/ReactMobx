@@ -1,22 +1,23 @@
 import React, { Component } from 'react';
-import { Card } from 'antd';
-import { twoB } from './Index.scss';
+import { observer } from 'mobx-react';
+import { Card, Button } from 'antd';
+import { twoBClass } from './Index.scss';
 
+@observer
 class TwoB extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {};
-    console.log(props);
-  }
-
   render() {
-    const { stores } = this.props;
-    console.log(this.props, 'render');
+    const { stores: { twoB, adressModal } } = this.props;
+    // console.log(this.props, 'render');
     return (
-      <Card className={twoB}>
+      <Card className={twoBClass}>
         # CONTENT A
         {' '}
-        {stores.TwoB.total}
+        {twoB.total}
+        <br />
+        {adressModal.text}
+        <Button onClick={adressModal.change}>
+          Change
+        </Button>
       </Card>
     );
   }

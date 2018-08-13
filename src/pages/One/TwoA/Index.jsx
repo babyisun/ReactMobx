@@ -5,23 +5,24 @@ import { twoAClass } from './Index.scss';
 
 @observer
 class TwoA extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {};
-    console.log(props);
-  }
+  // constructor(props) {
+  //   super(props);
+  // }
 
   render() {
-    const { stores: { twoA, adressModal } } = this.props;
+    const { stores: { twoA } } = this.props;
     console.log(this.props, 'render');
     return (
       <Card className={twoAClass}>
         # CONTENT A
         {' '}
         {twoA.total}
-        {adressModal.text}
-        <Button onClick={adressModal.change}>
-          Change
+        <br />
+        <Button onClick={twoA.async_add} loading={twoA.addLoading}>
+          Add
+        </Button>
+        <Button onClick={twoA.async_list_load} loading={twoA.loadLoading}>
+          Loading
         </Button>
       </Card>
     );

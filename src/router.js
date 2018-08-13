@@ -18,8 +18,8 @@ const router = [{
   children: [{
     name: '列表一',
     path: '/One/TwoA',
-    file: '/One/TwoA/Index',
-    store: ['pages/One/TwoA/store', 'components/AdressModal/store'],
+    file: 'Index', // 有file属性的会加入路由
+    store: ['store'], // 有store属性的会注入store实例到props，与path在同一目录直接写文件名即可
     icon: 'appstore-o',
     code: 400002,
     children: [{
@@ -31,17 +31,17 @@ const router = [{
     }],
   }, {
     name: '列表二',
-    path: '/one/twob',
-    file: '/One/TwoB/Index',
-    store: ['pages/One/TwoB/store'],
+    path: '/One/TwoB',
+    file: 'Index',
+    store: ['store', 'components/AdressModal/store'], // 注入多个store，不在同一文件夹要写全路径
     icon: 'appstore-o',
     code: 400002,
   }],
 },
 {
   name: '导航二',
-  path: '/demo',
-  file: '/demo/Index',
+  path: '/Demo',
+  file: 'Index',
   icon: 'bank',
   code: 400003,
 },

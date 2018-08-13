@@ -1,65 +1,37 @@
 import {
   observable,
   configure,
-  action,
-  runInAction,
+  // action,
+  // runInAction,
+  // extendObservable,
 } from 'mobx';
-import moment from 'moment';
-// import DataStorage from '@/utils/dataStorage';
-import ajax from '@/utils/ajax';
+// import moment from 'moment';
+import { asyncAction, asyncListAction } from './B';
 
 configure({
   enforceActions: true,
 });
 export default class BaseStroe {
-    @observable version = '123';
+  constructor() {
+    this.init();
+  }
 
-    @observable loading = false;
-
-    @observable user = null;
-
-    @observable privilege = null;
-
-    @action getUser = async () => {
-      const data = await ajax.get('/crm/user/userinfo');
-      if (data && data.success && data.data) {
-        runInAction(() => {
-          this.user = data.data.user;
-        });
+  init() {
+    const funs = Object.getOwnPropertyNames(Object.getPrototypeOf(this));
+    console.log('a', funs);
+    funs.forEach(item => {
+      // console.log(item,this[item].toString())
+      if (item.indexOf('async_list') >= 0) {
+        asyncListAction(this, item);
+      } else if (item.indexOf('async') >= 0) {
+        asyncAction(this, item);
       }
-    }
+    });
+  }
 
-    @action getPrivilege = async () => {
-      this.loading = true;
-      const data = await ajax.get('/crm/user/userprivilege');
-      if (data && data.success && data.data) {
-        runInAction(() => {
-          this.privilege = data.data.privilege;
-          this.loading = false;
-        });
-      }
-    }
+    @observable version = '';
 
     render() {
       this.version = +new Date();
     }
-
-  @action.bound clear(cleardate) {
-      this.pagination = {
-        page: 1,
-        page_size: 10,
-      };
-      if (!cleardate) {
-        this.query = {};
-      } else {
-        this.query = {
-          start_time: moment().startOf('day').add(-7, 'day').format('X'),
-          end_time: moment().endOf('day').format('X'),
-        };
-      }
-    }
-
-  @action.bound hasAuth(code) {
-    return this.privilege && this.privilege.indexOf(code) > -1;
-  }
 }

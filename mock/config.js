@@ -3,10 +3,10 @@ const agent = require('./agent');
 
 module.exports = {
     'GET /api/demo': demo.list,
-    'GET /crm/agent/getmerchantfee': agent.agentdatalist,
-    'GET /crm/agent/getsecondinfos ': agent.agentL2list,
-    'GET /crm/merchant/getmerchantlist ': agent.agentShoplist,
-    'GET /crm/merchant/getmerchantinfo ': agent.agentShopDetail,
-    'GET /crm/agent/getmerchantworkinfo': agent.agentPayList,
-    'GET /crm/agent/preorder/list':agent.purchaseList
+    'GET /api/agent/getmerchantfee': agent.agentdatalist,
+    'GET /api/agent/getsecondinfos ': agent.agentL2list,
+    'GET /api/merchant/getmerchantlist ': agent.agentShoplist,
+    'GET /api/merchant/getmerchantinfo ': agent.agentShopDetail,
+    'GET /api/agent/getmerchantworkinfo': agent.agentPayList,
+    'GET /api/agent/preorder/list': agent.purchaseList,
 };
