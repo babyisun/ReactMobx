@@ -3,13 +3,13 @@ import { Route } from 'react-router-dom';
 import Loadable from 'react-loadable';
 import { Launcher, MESSAGE } from '@/components/common/Launcher';
 
-const load = (path, file, store) => Loadable({
+const load = (folder, file, store) => Loadable({
   loader: async () => {
-    const promises = [import(`@/pages${path}/${file}`)];
+    const promises = [import(`@/pages${folder}/${file}`)];
     if (store && store.length) {
       store.forEach(item => {
         if (item.indexOf('/') < 0) {
-          promises.push(import(`@/pages${path}/${item}`));
+          promises.push(import(`@/pages${folder}/${item}`));
         } else {
           promises.push(import(`@/${item}`));
         }
@@ -47,8 +47,8 @@ const load = (path, file, store) => Loadable({
 });
 
 const setRoute = route => {
-  const { path, file, store } = route;
-  const LoadedComponent = load(path, file, store);
+  const { path, folder, file, store } = route;
+  const LoadedComponent = load(folder, file, store);
 
   const Component = props => <LoadedComponent {...props} />;
   return <Route key={path} path={path} render={Component} exact />;

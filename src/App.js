@@ -17,12 +17,6 @@ import Home from '@/pages/Home';
 import Page404 from '@/pages/Page404';
 // import { Launcher, MESSAGE } from '@/components/common/Launcher';
 
-
-/* const Routes1 = [<Route exact path="/list1" component={Launcher} />,
-  <Route exact path="/list2" render={() => <Launcher loading circle />} />,
-  <Route exact path="/list3" render={() => <Launcher text="加载中" />} />,
-  <Route exact path="/nav2" render={() => <Launcher message={MESSAGE.ERROR} />} />]; */
-
 // import(/* webpackChunkName: "foo" */ '@/pages/Home'))
 
 

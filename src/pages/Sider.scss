@@ -1,0 +1,70 @@
+$menu-item-color: #818d99;
+$menu-item-active-bg: #1890ff;
+.sider {
+    :global {
+        .ant-menu {
+            .ant-menu-submenu,
+            .ant-menu-item a {
+                background-position: 30px 15px;
+                background-size: 18px 18px;
+                background-repeat: no-repeat;
+            }
+            .ant-menu-submenu {
+                &:hover,
+                &.ant-menu-submenu-open {
+                    color: #fff !important;
+                } //  4.13 yc 修改支持3级菜单
+                .ant-menu-submenu-arrow,
+                &.ant-menu-submenu-open .ant-menu .ant-menu-submenu-arrow {
+                    right: 28px;
+                    margin-top: 1px;
+                    &::before,
+                    &:after {
+                        width: 8px;
+                    }
+                    &::before {
+                        transform: rotate(-45deg) translateX(3px);
+                    }
+                    &:after {
+                        transform: rotate(45deg) translateX(-3px);
+                    }
+                }
+                &.ant-menu-submenu-open .ant-menu-submenu-arrow,
+                &.ant-menu-submenu-open .ant-menu .ant-menu-submenu-open .ant-menu-submenu-arrow {
+                    margin-top: 0;
+                    &::before {
+                        transform: rotate(45deg) translateX(3px);
+                    }
+                    &:after {
+                        transform: rotate(-45deg) translateX(-3px);
+                    }
+                }
+            }
+            .ant-menu-item {
+                i {
+                    float: left;
+                    line-height: 50px;
+                    padding-left: 40px;
+                }
+                a {
+                    color: $menu-item-color;
+                    &:hover,
+                    &.active {
+                        color: #fff;
+                    }
+                    &.active {
+                        background-color: $menu-item-active-bg;
+                    }
+                }
+            }
+        }
+    }
+    .remind {
+        display: inline-block;
+        width: 8px;
+        height: 8px;
+        background-color: #f74052;
+        border-radius: 50%;
+        transform: translate3d(0, -8px, 0);
+    }
+}

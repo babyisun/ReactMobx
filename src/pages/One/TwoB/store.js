@@ -117,22 +117,6 @@ class TwoB extends BaseStroe {
         });
       }
     }
-
-    // 冻结/解冻
-    @action onFreeze = async (row) => {
-      const _status = +!row.freeze_status;
-      const data = await ajax.post('/crm/agent/updateFreezeStatus', {
-        agent_id: row.agent_id,
-        status: _status,
-      });
-      if (data && data.data) {
-        runInAction(() => {
-          row.freeze_status = _status;
-          this.render();
-          message.success(`${row.freeze_status ? '解冻' : '冻结'}成功`);
-        });
-      }
-    }
 }
 
 const store = new TwoB();
