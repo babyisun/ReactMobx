@@ -18,7 +18,11 @@ export default class BaseStroe {
 
   init() {
     const funs = Object.getOwnPropertyNames(Object.getPrototypeOf(this));
-    console.log('a', funs);
+    console.log('a', this['async_add'] ? this['async_add'].name : 'no');
+    console.log('b', this);
+    Object.keys(this).forEach(actionName => {
+      console.log(actionName, 'name');
+    });
     funs.forEach(item => {
       // console.log(item,this[item].toString())
       if (item.indexOf('async_list') >= 0) {

@@ -51,6 +51,7 @@ export const asyncListAction = (currClass, currAction) => {
       currClass[`${actionName}Loading`] = true;
     });
     const data = await old();
+    console.log(data);
     if (data && data.success) {
       runInAction(() => {
         currClass[`${actionName}Data`] = data.data;

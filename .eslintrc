@@ -18,6 +18,7 @@
       "no-plusplus": ["warn", { "allowForLoopAfterthoughts": true }],
       "no-console": "off",
       "no-unused-vars": "warn",
+      "class-methods-use-this":"warn",
       "sort-comp": "off",
       "no-return-assign": "off",
       "dot-notation": "off",
