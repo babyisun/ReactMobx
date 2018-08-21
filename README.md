@@ -161,7 +161,3 @@ src
       ListPage.jsx
       itemPage.jsx // 应使用 PascalCase
 ```
-├── theme.js  --antd的主题文件
-├── yarn-error.log
-└── yarn.lock
-```
