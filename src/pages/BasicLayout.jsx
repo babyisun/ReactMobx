@@ -1,7 +1,7 @@
 // 基础框架引用
 import React from 'react';
 import { observer, inject } from 'mobx-react';
-import ajax from '@/utils/ajax';
+// import ajax from '@/utils/ajax';
 // 底层ui组件引用
 import { Layout } from 'antd';
 import { withRouter } from 'react-router-dom';
@@ -36,7 +36,6 @@ class BasicLayout extends React.Component {
   render() {
     const {
       children,
-      baseStore,
     } = this.props;
     const { collapsed } = this.state;
     return (
