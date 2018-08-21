@@ -13,13 +13,13 @@ exit 1
 fi
 
 rm -rf *.zip *.tar.gz
-mkdir -p ./output/webroot/crmanage
+mkdir -p ./output/webroot/app
 mkdir -p ./output/webroot/static
 
-cp ./build/index.html ./output/webroot/crmanage/index.php
+cp ./build/index.html ./output/webroot/app/index.php
 cp ./build/favicon.ico ./output/webroot/favicon.ico
 cp -r ./build/static/* ./output/webroot/static
 
-#zip -qr buy-pc-${TIME}.zip ./output
+#zip -qr ReactMobx-${TIME}.zip ./output
 tar zcvf ReactMobx-${TIME}.tar.gz ./output
 rm -rf ./build ./output
