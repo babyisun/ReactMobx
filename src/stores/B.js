@@ -3,11 +3,13 @@ import {
   runInAction,
 } from 'mobx';
 
+const SUFFIX = { LOADING: 'Loading', DATA: 'Data' };
+// 不成熟方案
 export const asyncAction = (currClass, currAction) => {
   const actionName = currAction.replace('async_', '');
   extendObservable(currClass, {
-    [`${actionName}Loading`]: false,
-    [`${actionName}Data`]: null,
+    [`${actionName}${SUFFIX.LOADING}`]: false,
+    [`${actionName}${SUFFIX.DATA}`]: null,
     // loading: {
     //   [actionName]: false,
     // },
@@ -18,17 +20,17 @@ export const asyncAction = (currClass, currAction) => {
   const old = currClass[currAction];
   currClass[currAction] = async () => {
     runInAction(() => {
-      currClass[`${actionName}Loading`] = true;
+      currClass[`${actionName}${SUFFIX.LOADING}`] = true;
     });
     const data = await old();
     if (data && data.success) {
       runInAction(() => {
-        currClass[`${actionName}Data`] = data.data;
-        currClass[`${actionName}Loading`] = false;
+        currClass[`${actionName}${SUFFIX.DATA}`] = data.data;
+        currClass[`${actionName}${SUFFIX.LOADING}`] = false;
       });
     } else {
       runInAction(() => {
-        currClass[`${actionName}Loading`] = false;
+        currClass[`${actionName}${SUFFIX.LOADING}`] = false;
       });
     }
   };
