@@ -23,10 +23,10 @@ class TwoA extends Component {
         详情页
         </Link>
         &nbsp;
-        <Button onClick={twoA.async_add} loading={twoA.addLoading}>
+        <Button onClick={twoA.add} loading={twoA.addLoading}>
           Add
         </Button>
-        <Button onClick={twoA.async_list_load} loading={twoA.loadLoading}>
+        <Button onClick={twoA.load} loading={twoA.loadLoading}>
           Loading
         </Button>
       </Card>
