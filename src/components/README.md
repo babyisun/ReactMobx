@@ -3,17 +3,21 @@
 
 # 公共组件
 
-本文件夹存放多个页面用到的公共组件，组件名称须与其 `.scss` 样式文件名称一致，以 [PascalCase](https://baike.baidu.com/item/PascalCase) 命名，，共同放置在目录第一层，不放置在子文件夹中。
+本文件夹存放多个页面用到的公共组件，相关公共组件建议存放在一个单独文件夹，与pages文件夹规范一致，组件名称须与其 `.scss` 样式文件名称一致，如需 `store` 可以引入对应文件，以 [PascalCase](https://baike.baidu.com/item/PascalCase) 命名
 
 Good:
 
 ```
 src
   componenents
-    CommonComponenetA.jsx
-    CommonComponenetA.scss
-    CommonComponenetB.jsx
-    CommonComponenetB.scss
+    Common
+     ComponenetA.jsx
+     ComponenetA.scss
+     store.js
+    Modal
+     ComponenetB.jsx
+     ComponenetB.scss
+     store.js
 ```
 
 Bad:
@@ -21,15 +25,14 @@ Bad:
 ```
 src
   componenents
-    CommonComponenetA // 不应放置在子文件夹内
-      index.jsx
-      index.scss
-    CommonComponenetB
-      index.jsx
-      style.scss
-    CommonComponenetC
-      CommonComponenetC.jsx
-      CommonComponenetC.scss
-    CommonComponenetD.jsx
-    commonComponenetD.scss // 应使用 PascalCase
+    ComponenetA.jsx // 不应该全部都堆在根目录
+    ComponenetA.scss
+    ComponenetAStore.js
+    ComponenetB.jsx
+    ComponenetB.scss
+    ComponenetBStore.js
+    
+    Common
+     ComponenetD.jsx
+     componenetd.scss // 应使用 PascalCase
 ```
