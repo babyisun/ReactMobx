@@ -42,7 +42,6 @@
             transform: rotate(90deg)
         }
         .right_cartoon {
-            // -webkit-animation: circleProgressLoad_right 10s linear infinite forwards;
             :local {
                 animation: right #{$number}s linear infinite forwards;
             }
@@ -57,7 +56,6 @@
             }
         }
         .left_cartoon {
-            // -webkit-animation: circleProgressLoad_left 10s linear infinite forwards;
             :local {
                 animation: left #{$number}s linear infinite forwards;
             }
