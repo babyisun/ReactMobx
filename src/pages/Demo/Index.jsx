@@ -1,4 +1,5 @@
 import React from 'react';
+import Timer from '@/components/Common/Timer';
 import styles from './Index.scss';
 
 const Demo = () => (
@@ -11,6 +12,7 @@ const Demo = () => (
         <p key="desc">
           Demo页是一个无状态组件
         </p>
+        <Timer />
       </header>
     </div>
   </div>

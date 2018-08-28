@@ -1,7 +1,7 @@
 import React from 'react';
 import { Route } from 'react-router-dom';
 import Loadable from 'react-loadable';
-import { Launcher, MESSAGE } from '@/components/common/Launcher';
+import { Launcher, MESSAGE } from '@/components/Common/Launcher';
 
 const load = (folder, file, store) => Loadable({
   loader: async () => {
