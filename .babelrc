@@ -1,6 +1,13 @@
 {
   "presets": [
     ["env", { "modules": false }],
+    [
+      "es2015",
+      {
+        "module": false
+      }
+    ],
+    "react-app",
     "react",
     "stage-2"
   ],
