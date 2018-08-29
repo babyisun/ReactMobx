@@ -1,5 +1,5 @@
 import React from 'react';
-import Timer from '@/components/common/Timer';
+import Timer from '@/components/Common/Timer';
 import styles from './Index.scss';
 
 const Demo = () => (
