@@ -10,7 +10,7 @@ Good:
 ```
 src
   componenents
-    Common
+    common
      ComponenetA.jsx
      ComponenetA.scss
      store.js
@@ -32,7 +32,7 @@ src
     ComponenetB.scss
     ComponenetBStore.js
     
-    Common
+    common
      ComponenetD.jsx
      componenetd.scss // 应使用 PascalCase
 ```

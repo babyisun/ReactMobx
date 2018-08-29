@@ -55,7 +55,6 @@
 
 3.从远程分支拉取到自己的分支`git pull origin dev:${yourname}`
 
-4.测试模式下如果报Unexpected token import，可以尝试去掉babelrc文件中的plugins配置下按需加载antd样式的配置，antd样式配置与使用jest测试包含es6的模块会有冲突。
 
 
 ```bash

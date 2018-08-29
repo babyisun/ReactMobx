@@ -11,8 +11,23 @@
     "react",
     "stage-2"
   ],
-  "plugins": [
-    "transform-decorators-legacy",
-    ["import", { "libraryName": "antd", "libraryDirectory": "es", "style": true }]
-  ]
+  "env": {
+    "test": {
+      "plugins": [
+        "transform-decorators-legacy"
+      ]
+    },
+    "production": {
+      "plugins": [
+        "transform-decorators-legacy",
+        ["import", { "libraryName": "antd", "libraryDirectory": "es", "style": true }]
+      ]
+    },
+    "development": {
+      "plugins": [
+        "transform-decorators-legacy",
+        ["import", { "libraryName": "antd", "libraryDirectory": "es", "style": true }]
+      ]
+    }
+  }
 }
