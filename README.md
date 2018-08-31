@@ -13,6 +13,7 @@
 * [Sass](https://github.com/webpack-contrib/sass-loader)
 * [CSS Modules](https://github.com/css-modules/css-modules)
 * [webpack](https://webpack.docschina.org/concepts/)
+* [jest](http://jestjs.io/docs/zh-Hans/getting-started)
 
 ## 开发构建
 
