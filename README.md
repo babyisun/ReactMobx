@@ -14,6 +14,7 @@
 * [CSS Modules](https://github.com/css-modules/css-modules)
 * [webpack](https://webpack.docschina.org/concepts/)
 * [jest](http://jestjs.io/docs/zh-Hans/getting-started)
+* [nodejs](https://nodejs.org/)
 
 ## 开发构建
 
