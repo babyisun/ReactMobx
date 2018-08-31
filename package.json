@@ -13,7 +13,7 @@
     "autoprefixer": "7.1.6",
     "axios": "^0.18.0",
     "babel-core": "6.26.0",
-    "babel-eslint": "^8.0.1",
+    "babel-eslint": "^8.2.6",
     "babel-jest": "20.0.3",
     "babel-loader": "^7.1.4",
     "babel-plugin-import": "^1.8.0",
@@ -97,7 +97,7 @@
     ],
     "testMatch": [
       "<rootDir>/src/**/__tests__/**/*.{js,jsx,mjs}",
-      "<rootDir>/src/**/?(*.)(spec|test).{js,jsx,mjs}"
+      "<rootDir>/test/**/?(*.)(spec|test).{js,jsx,mjs}"
     ],
     "testEnvironment": "node",
     "testURL": "http://localhost",
