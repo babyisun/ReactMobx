@@ -4,7 +4,7 @@
 
 ## 项目简介
 
-本项目为 React 项目，使用 [Create React App](https://github.com/facebook/create-react-app) 搭建，使用到的技术栈为：
+本项目为 React 项目，使用 [Create React App](https://github.com/facebook/create-react-app) 搭建, 在CRA的基础上定制化了webpack配置，使用到的技术栈为：
 
 * [React](https://reactjs.org/)
 * [Ant Design](https://ant.design/docs/react/introduce-cn)
