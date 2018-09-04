@@ -101,15 +101,15 @@ git checkout ${ME}
 ├── src
 │   ├── index.scss  --公共样式文件
 │   ├── App.js  --主业务入口
-│   ├── components  --组件文件夹
-│   ├── index.js  --SPA生成入口
-│   ├── pages
+│   ├── components  --公共组件文件夹
+│   ├── index.js  --SPA生成入口文件
+│   ├── pages --页面文件夹
 │   │   ├── Page1.jsx  --页面文件
 │   │   ├── Page1.scss --页面文件样式表
 │   ├── assets  --图片图标等资源文件目录
-│   ├── stores  --store文件集合
-│   │   ├── MyStore.js
-│   │   ├── YourStore.js
+│   ├── stores  --公用store文件与底层基类
+│   │   ├── B.js
+│   │   ├── BaseStore.js
 │   │   └── index.js
 │   └── utils  --工具类
 ├── theme.js  --antd的主题文件
@@ -123,9 +123,13 @@ git checkout ${ME}
 
 页面自有的组件文件夹命名为 `components`（复数，小写），`pages`（复数，小写），`store` 文件夹为pages对应的modal文件。
  
-页面用到的图片等资源文件（`resources`）、工具函数（`utils`）等，均放置在 `src` 下建公共目录。
+页面用到的公共资源文件（`assets`）、公共工具函数（`utils`）等，放置在 `src` 下建公共目录。
 
 总之，遵循公共组件放置在公共位置，自有组件自组织的原则。
+
+**`src/pages`**
+
+# 页面文件
 
 Good:
 
@@ -133,15 +137,8 @@ Good:
 src
   pages
     pageA
-      components
-        ComponentA.jsx
-        ComponentA.scss
-        ComponentB.jsx
-        ComponentB.scss
-      ListPage.jsx
-      ListPage.scss
-      ItemPage.jsx
-      ItemPage.scss
+      ComponentA.jsx
+      ComponentA.scss
     pageB
       ListPage.jsx
       ListPage.scss
@@ -155,13 +152,76 @@ Bad:
 src
   pages
     PageA
-      Utils     //放置在公共区域
-      ListPage // 文件夹字母小写
+      listPage // 文件夹字母大写
         index.jsx //首字母大写
         index.scss  //首字母大写
-      itemPage
+      ItemPage
         Index.jsx
         style.scss  //对应为Index.scss
       ListPage.jsx
       itemPage.jsx // 应使用 PascalCase
+```
+
+
+**`src/components`**
+
+# 公共组件
+
+本文件夹存放多个页面用到的公共组件，相关公共组件建议存放在一个单独文件夹，与pages文件夹规范一致，组件名称须与其 `.scss` 样式文件名称一致，如需 `store` 可以引入对应文件，以 [PascalCase](https://baike.baidu.com/item/PascalCase) 命名
+
+Good:
+
+```
+src
+  componenents
+    Common
+     ComponenetA.jsx
+     ComponenetA.scss
+     store.js
+    ModalFirst
+     ModalFirstB.jsx
+     ModalFirstB.scss
+     store.js
+```
+
+Bad:
+
+```
+src
+  componenents
+    ComponenetA.jsx // 不应该全部都堆在根目录
+    ComponenetA.scss
+    ComponenetAStore.js
+    ComponenetB.jsx
+    ComponenetB.scss
+    ComponenetBStore.js
+    
+    common // 文件夹首字母大写
+     ComponenetD.jsx
+     componenetd.scss // 应使用 PascalCase
+```
+
+**`src/utils`**
+
+# 工具函数
+
+本文件夹存放全局公用的工具函数，最好是[纯函数](https://zh.wikipedia.org/wiki/%E7%BA%AF%E5%87%BD%E6%95%B0)，函数文件以 [camelCase](https://baike.baidu.com/item/camelCase) 命名。
+
+Good:
+
+```
+src
+  utils
+    fnA.js
+    fnB.js
+```
+
+Bad:
+
+```
+src
+  utils
+    FnA.js // 应使用 camelCase
+    helloword.js // 应使用 camelCase
+    fnB.jsx // 应使用 `.js` 文件
 ```

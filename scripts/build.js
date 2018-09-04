@@ -110,6 +110,7 @@ function build(previousFileSizes) {
       if (err) {
         return reject(err);
       }
+      console.log('hash:', stats.hash);
       const messages = formatWebpackMessages(stats.toJson({}, true));
       if (messages.errors.length) {
         // Only keep the first error. Others are often indicative
