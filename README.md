@@ -2,7 +2,7 @@
 
 > ReactMobx最佳实践
 
-## 项目简介
+## ✨ 项目简介
 
 本项目为 React 项目，使用 [Create React App](https://github.com/facebook/create-react-app) 搭建, 在CRA的基础上定制化了webpack配置，使用到的技术栈为：
 
@@ -16,25 +16,40 @@
 * [jest](http://jestjs.io/docs/zh-Hans/getting-started)
 * [nodejs](https://nodejs.org/)
 
-## 开发构建
+## 🔨 开发构建
 
 安装项目的全部依赖
+
+```bash
 `npm install` or `yarn`
+```
 
 开发模式，运行项目
+
+```bash
 `npm start` or `yarn start`
+```
 
 带有mock数据的开发模式，运行项目
+
+```bash
 `npm run start:mock` or `yarn start:mock`
+```
 
 测试模式，进行单元测试
+
+```bash
 `npm test` or `yarn test`
+```
 
 生产模式，构建项目
+
+```bash
 `npm run build` or `yarn build`
+```
 
 
-## Git 脚本
+## ⌨️ Git 脚本
 
 说明：每个人新建自己的分支
 
@@ -83,12 +98,12 @@ git push
 git checkout ${ME}
 ```
 
-## 打包
+## 🤝 打包
 
 `sh zip.sh` 运行 `zip.sh` 脚本，即可生成构建好的文件的压缩包。
 
 
-## 目录结构
+## 🔖 目录结构
 
 ```
 ├── README.md
@@ -117,7 +132,7 @@ git checkout ${ME}
 └── yarn.lock
 ```
 
-## 命名规范
+## 📝 命名规范
 
 组件以 [PascalCase](https://baike.baidu.com/item/PascalCase) 命名，文件夹中的组件与其 `.scss` 样式文件名称一致，同样以 PascalCase 命名，放置在文件夹第一层。
 
