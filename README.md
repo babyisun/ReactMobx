@@ -19,19 +19,19 @@
 ## 开发构建
 
 安装项目的全部依赖
-### `npm install` or `yarn`
+`npm install` or `yarn`
 
 开发模式，运行项目
-### `npm start` or `yarn start`
+`npm start` or `yarn start`
 
 带有mock数据的开发模式，运行项目
-### `npm run start:mock` or `yarn start:mock`
+`npm run start:mock` or `yarn start:mock`
 
 测试模式，进行单元测试
-### `npm test` or `yarn test`
+`npm test` or `yarn test`
 
 生产模式，构建项目
-### `npm run build` or `yarn build`
+`npm run build` or `yarn build`
 
 
 ## Git 脚本
@@ -129,7 +129,7 @@ git checkout ${ME}
 
 **`src/pages`**
 
-# 页面文件
+### 页面文件
 
 Good:
 
@@ -165,7 +165,7 @@ src
 
 **`src/components`**
 
-# 公共组件
+### 公共组件
 
 本文件夹存放多个页面用到的公共组件，相关公共组件建议存放在一个单独文件夹，与pages文件夹规范一致，组件名称须与其 `.scss` 样式文件名称一致，如需 `store` 可以引入对应文件，以 [PascalCase](https://baike.baidu.com/item/PascalCase) 命名
 
@@ -203,7 +203,7 @@ src
 
 **`src/utils`**
 
-# 工具函数
+### 工具函数
 
 本文件夹存放全局公用的工具函数，最好是[纯函数](https://zh.wikipedia.org/wiki/%E7%BA%AF%E5%87%BD%E6%95%B0)，函数文件以 [camelCase](https://baike.baidu.com/item/camelCase) 命名。
 
