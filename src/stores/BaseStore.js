@@ -32,7 +32,7 @@ export default class BaseStroe {
     //   }
     // });
     this.loading && this.loading.forEach(item => {
-      console.log(item);
+      // console.log(item);
       asyncAction(this, item);
     });
   }

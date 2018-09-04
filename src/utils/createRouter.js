@@ -34,9 +34,10 @@ const load = (folder, file, store) => Loadable({
 
       if (len > 1) {
         for (let i = 1; i < len; i++) {
-          const name = loaded[i].default.constructor.name.split('');
-          name[0] = name[0].toLowerCase();
-          stores[name.join('')] = loaded[i].default || loaded;
+          // const name = loaded[i].default.constructor.name.split('');
+          // name[0] = name[0].toLowerCase();
+          const name = loaded[i].default.constructor['__props'];
+          stores[name] = loaded[i].default || loaded;
         }
       }
     }

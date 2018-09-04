@@ -13,7 +13,7 @@
  */
 const router = [{
   name: '导航一',
-  path: '/One',
+  path: '/OneX',
   icon: 'appstore',
   code: 400001,
   children: [{

@@ -5,11 +5,12 @@ import {
 } from 'mobx';
 import BaseStroe from '@/stores/BaseStore';
 import ajax from '@/utils/ajax';
-import { loading } from '@/utils/decorator';
+import { loading, toProps } from '@/utils/decorator';
 // import {
 //   message,
 // } from 'antd';
 
+@toProps('twoA')
 class TwoA extends BaseStroe {
     // 接口函数统一定义
     api = {

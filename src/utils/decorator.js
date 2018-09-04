@@ -24,3 +24,7 @@ export const loading = (target, name, descriptor) => {
   target.loading.push(name);
   return descriptor;
 };
+
+export const toProps = (name) => (target) => {
+  target['__props'] = name;
+};

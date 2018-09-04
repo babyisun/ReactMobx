@@ -1,6 +1,8 @@
 import { observable } from 'mobx';
 import BaseStroe from '@/stores/BaseStore';
+import { toProps } from '@/utils/decorator';
 
+@toProps('twoB')
 class TwoB extends BaseStroe {
     // 分页参数
     @observable pagination = {

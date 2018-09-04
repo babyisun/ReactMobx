@@ -7,7 +7,7 @@ import { twoBClass } from './Index.scss';
 class TwoB extends Component {
   render() {
     const { stores: { twoB, adressModal } } = this.props;
-    // console.log(this.props, 'render');
+    console.log(this.props, 'render');
     return (
       <Card className={twoBClass}>
         # CONTENT A
