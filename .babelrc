@@ -1,6 +1,6 @@
 {
   "presets": [
-    "react-app"
+    "react-app", "env"
   ],
   "env": {
     "production": {
@@ -15,6 +15,7 @@
     }
   },
   "plugins": [
-    "transform-decorators-legacy"
+    "transform-decorators-legacy",
+    "dynamic-import-node"
   ]
 }
