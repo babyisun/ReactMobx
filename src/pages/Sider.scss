@@ -42,19 +42,29 @@ $menu-item-active-bg: #1890ff;
             }
             .ant-menu-item {
                 i {
-                    float: left;
                     line-height: 50px;
+                    height: 50px;
                     padding-left: 40px;
+                    top: 16px;
+                    z-index: 1;
+                    position: absolute;
                 }
                 a {
                     color: $menu-item-color;
-                    &:hover,
-                    &.active {
+                    text-decoration: none;
+                    width: 100%;
+                    display: inline-block;
+                    padding-left: 66px;
+                    &:hover{
                         color: #fff;
                     }
                     &.active {
+                        color: #fff;
                         background-color: $menu-item-active-bg;
                     }
+                    // &.active {
+                    //     background-color: $menu-item-active-bg;
+                    // }
                 }
             }
         }
