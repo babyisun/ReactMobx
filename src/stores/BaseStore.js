@@ -9,7 +9,7 @@ import {
 import { asyncAction } from './B';
 
 configure({
-  enforceActions: true,
+  enforceActions: 'always',
 });
 export default class BaseStroe {
   constructor() {
