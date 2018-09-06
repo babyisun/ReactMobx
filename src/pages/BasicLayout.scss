@@ -111,7 +111,7 @@ $menu-item-active-bg: #1890ff;
                                 padding-left: 0 !important;
                                 padding-right: 0 !important;
                                 &.ant-menu-item-selected {
-                                    background-color: transparent;
+                                    // background-color: transparent;
                                     color: $menu-item-color;
                                     i {
                                         color: #fff;
@@ -120,7 +120,7 @@ $menu-item-active-bg: #1890ff;
                                 a {
                                     line-height: inherit;
                                     height: 50px;
-                                    padding-left: 65px;
+                                    // padding-left: 65px;
                                     padding-right: 30px;
                                 }
                             }
