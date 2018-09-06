@@ -11,16 +11,23 @@ $menu-item-active-bg: #1890ff;
             }
             .ant-menu-submenu {
                 &:hover,
-                &.ant-menu-submenu-open {
+                &.ant-menu-submenu-selected {
                     color: #fff !important;
-                } //  4.13 yc 修改支持3级菜单
+                    .ant-menu-submenu-arrow {
+                        &::before,
+                        &::after {
+                            background: #fff !important;
+                        }
+                    }
+                }
                 .ant-menu-submenu-arrow,
                 &.ant-menu-submenu-open .ant-menu .ant-menu-submenu-arrow {
                     right: 28px;
                     margin-top: 1px;
                     &::before,
-                    &:after {
+                    &::after {
                         width: 8px;
+                        background: #818d99!important;
                     }
                     &::before {
                         transform: rotate(-45deg) translateX(3px);
@@ -46,6 +53,7 @@ $menu-item-active-bg: #1890ff;
                     height: 50px;
                     padding-left: 40px;
                     top: 16px;
+                    left: 0;
                     z-index: 1;
                     position: absolute;
                 }

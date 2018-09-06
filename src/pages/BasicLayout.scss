@@ -88,6 +88,13 @@ $menu-item-active-bg: #1890ff;
                             border-right: 0;
                             .ant-menu-submenu {
                                 color: $menu-item-color;
+                                i.ant-menu-submenu-arrow{
+                                    &::before,
+                                    &::after {
+                                        color: $menu-item-color!important;
+                                    }
+                                    
+                                }
                                 .ant-menu-submenu-title {
                                     height: 50px;
                                     margin-top: 5px;

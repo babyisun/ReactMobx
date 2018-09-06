@@ -1,6 +1,6 @@
 import React from 'react';
 import { Layout, Menu, Icon } from 'antd';
-import { NavLink } from 'react-router-dom';
+import { withRouter, NavLink } from 'react-router-dom';
 import router from '../router';
 import styles from './Sider.scss';
 
@@ -8,20 +8,23 @@ const { SubMenu, Item } = Menu;
 
 class Sider extends React.Component {
   render() {
-    const { collapsed, onCollapse } = this.props;
+    const { collapsed, onCollapse, location: { pathname } } = this.props;
+    const path = pathname.split('/');
+    const defaultOpen = path.length > 1 ? path[1] : '';
+    console.log(defaultOpen);
     return (
       <Layout.Sider className={styles.sider} width={260} collapsible
         collapsed={collapsed} onCollapse={onCollapse}>
-        <Menu theme="dark" mode="inline">
+        <Menu theme="dark" mode="inline" defaultOpenKeys={[`/${defaultOpen}`]} defaultSelectedKeys={[pathname]}>
           {
             router.map(item => !item.children
               ? (
                 <Item key={item.path} className={item.path.slice(1)}>
                   <div>
                     <span>
-                      <Icon type={item.icon} />
                       <NavLink to={item.path} activeClassName="active">
-                        {item.name}
+                        <Icon type={item.icon} />
+                        <span>{item.name}</span>
                       </NavLink>
                     </span>
                   </div>
@@ -54,4 +57,4 @@ class Sider extends React.Component {
   }
 }
 
-export default Sider;
+export default withRouter(Sider);
