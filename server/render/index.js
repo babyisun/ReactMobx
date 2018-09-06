@@ -16,15 +16,15 @@ const getMatch = (routesArray, url) => routesArray.some(router => matchPath(url,
  * 渲染服务端路由
  */
 module.exports.render = async (ctx, next) => {
-  const { store } = getCreateStore(ctx);
+  // const { store } = getCreateStore(ctx);
   const branch = matchRoutes(router, ctx.req.url);
-  const promises = branch.map(({ route }) => {
-    const { fetch } = route.component;
-    return fetch instanceof Function ? fetch(store) : Promise.resolve(null);
-  });
-  await Promise.all(promises).catch((err) => {
-    console.log(err);
-  });
+  // const promises = branch.map(({ route }) => {
+  //   const { fetch } = route.component;
+  //   return fetch instanceof Function ? fetch(store) : Promise.resolve(null);
+  // });
+  // await Promise.all(promises).catch((err) => {
+  //   console.log(err);
+  // });
   const isMatch = getMatch(router, ctx.req.url);
   if (!isMatch) {
     await next();
