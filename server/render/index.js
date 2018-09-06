@@ -2,10 +2,9 @@ import React from 'react';
 import ReactDOMServer from 'react-dom/server';
 import { matchPath } from 'react-router-dom';
 import { matchRoutes } from 'react-router-config';
-import App from '../../src/app';
+// import App from '../../src/app';
 import { layout } from './layout';
-import router from '../../src/router/route';
-
+import router from '../../src/router';
 
 const getMatch = (routesArray, url) => routesArray.some(router => matchPath(url, {
   path: router.path,
@@ -31,7 +30,7 @@ module.exports.render = async (ctx, next) => {
     await next();
   } else {
     const html = ReactDOMServer.renderToString(
-      <App />,
+      <div />,
     );
     const body = layout(html);
     ctx.body = body;
