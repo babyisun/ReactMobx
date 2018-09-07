@@ -47,7 +47,11 @@
 ```bash
 `npm run build` or `yarn build`
 ```
+服务端渲染（探索）
 
+```bash
+`npm run build` 后 `npm run server`
+```
 
 ## ⌨️ Git 脚本
 
@@ -72,6 +76,7 @@
 
 3.从远程分支拉取到自己的分支`git pull origin dev:${yourname}`
 
+4.服务端渲染功能现在仅支持渲染打包后的文件首页，其中服务端路由和普通路由之间还没有实现同构，需要进一步探索。
 
 
 ```bash
