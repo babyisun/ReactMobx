@@ -92,6 +92,7 @@
     "server": "node scripts/server.js",
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
+    "build:test":"NODE_ENV=test BABEL_ENV=production node scripts/build.js",
     "test": "node scripts/test.js --env=jsdom",
     "mock": "nodemon --watch mock mock/server.js",
     "start:mock": "concurrently \"nodemon --watch mock mock/server.js\" \"node scripts/start.js\""

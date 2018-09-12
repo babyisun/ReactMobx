@@ -2,9 +2,9 @@
 
 TIME=`date +%m%d-%H%M`
 if which yarn 2>/dev/null; then
-  yarn build
+  yarn build:test
 else
-  npm run build
+  npm run build:test
 fi
 
 
