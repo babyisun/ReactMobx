@@ -9,12 +9,8 @@
     }
   },
   "dependencies": {
-<<<<<<< HEAD
     "antd": "^3.9.1",
-=======
-    "antd": "^3.6.4",
     "asset-require-hook": "^1.2.0",
->>>>>>> origin/master
     "autoprefixer": "7.1.6",
     "axios": "^0.18.0",
     "babel-core": "6.26.0",

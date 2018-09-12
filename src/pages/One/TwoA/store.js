@@ -1,7 +1,7 @@
 import {
   observable,
   action,
-  // runInAction,
+  runInAction,
 } from 'mobx';
 import BaseStroe from '@/stores/BaseStore';
 import ajax from '@/utils/ajax';
@@ -20,7 +20,9 @@ class TwoA extends BaseStroe {
     }
 
     // 监听store声明
-    @observable total = 10010;
+    @observable total = 0;
+
+    @observable data = null;
 
     @observable twoData = [];
 
@@ -47,6 +49,12 @@ class TwoA extends BaseStroe {
       const params = { ...{ name: '这是一个示例参数' } };
       const data = await this.api.getList(params);
       console.log(data);
+      runInAction(() => {
+        if (data.success) {
+          this.data = data.data.list;
+          this.total = data.total;
+        }
+      });
     }
 }
 const store = new TwoA();
