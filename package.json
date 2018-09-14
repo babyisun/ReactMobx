@@ -35,6 +35,7 @@
     "dotenv-expand": "4.2.0",
     "eslint": "^4.19.1",
     "eslint-config-react-app": "^2.1.0",
+    "eslint-formatter-friendly-cn": "^5.0.0",
     "eslint-friendly-formatter": "^4.0.1",
     "eslint-loader": "1.9.0",
     "eslint-plugin-flowtype": "2.39.1",
@@ -92,7 +93,7 @@
     "server": "node scripts/server.js",
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
-    "build:test":"NODE_ENV=test BABEL_ENV=production node scripts/build.js",
+    "build:test": "NODE_ENV=test BABEL_ENV=production node scripts/build.js",
     "test": "node scripts/test.js --env=jsdom",
     "mock": "nodemon --watch mock mock/server.js",
     "start:mock": "concurrently \"nodemon --watch mock mock/server.js\" \"node scripts/start.js\""
