@@ -1,8 +1,8 @@
-// @import '@/resources/font_antd/iconfont.css';
-
 // @import '@/index.css';
 
 :global {
+    @import '@/assets/font/iconfont.css';
+
     #root {
         // ant design
         .ant-calendar-range-picker-separator {

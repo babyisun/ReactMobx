@@ -23,7 +23,8 @@ class Sider extends React.Component {
                   <div>
                     <span>
                       <NavLink to={item.path} activeClassName="active">
-                        <Icon type={item.icon} />
+                        {/* <Icon type={item.icon} /> */}
+                        <i className="iconfont icon-pause-outline" />
                         <span>{item.name}</span>
                       </NavLink>
                     </span>
