@@ -52,10 +52,13 @@ $menu-item-active-bg: #1890ff;
                     line-height: 50px;
                     height: 50px;
                     padding-left: 40px;
-                    top: 16px;
+                    // top: 16px;
                     left: 0;
                     z-index: 1;
                     position: absolute;
+                    svg{
+                        display: inline;
+                    }
                 }
                 a {
                     color: $menu-item-color;

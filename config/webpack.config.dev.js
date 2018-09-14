@@ -8,7 +8,7 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const CaseSensitivePathsPlugin = require('case-sensitive-paths-webpack-plugin');
 const InterpolateHtmlPlugin = require('react-dev-utils/InterpolateHtmlPlugin');
 const WatchMissingNodeModulesPlugin = require('react-dev-utils/WatchMissingNodeModulesPlugin');
-const formatter = require('eslint-friendly-formatter');
+const formatter = require('eslint-formatter-friendly-cn');
 // const eslintFormatter = require('react-dev-utils/eslintFormatter');
 const ModuleScopePlugin = require('react-dev-utils/ModuleScopePlugin');
 const getClientEnvironment = require('./env');
@@ -126,6 +126,7 @@ module.exports = {
                     loader: require.resolve('eslint-loader'),
                 }, ],
                 include: paths.appSrc,
+                // exclude:['*/iconfont.js'],
             },
             {
                 // "oneOf" will traverse all following loaders until one will
@@ -161,7 +162,7 @@ module.exports = {
                     // "style" loader turns CSS into JS modules that inject <style> tags.
                     // In production, we use a plugin to extract that CSS to a file, but
                     // in development "style" loader enables hot editing of CSS.
-                    /* {
+                    {
                         test: /\.css$/,
                         use: [
                             require.resolve('style-loader'),
@@ -192,7 +193,7 @@ module.exports = {
                                 },
                             },
                         ],
-                    }, */
+                    },
                     // 处理 Ant Design 的 less 文件
                     {
                         test: /\.less$/,
