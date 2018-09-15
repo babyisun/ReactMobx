@@ -54,7 +54,7 @@ class TwoA extends Component {
         <Button onClick={twoA.add} loading={twoA.addLoading}>
           Add
         </Button>
-        <Button onClick={twoA.load} loading={twoA.loadLoading}>
+        <Button id="button2" onClick={twoA.load} loading={twoA.loadLoading}>
           Loading
         </Button>
         <Table

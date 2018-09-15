@@ -27,8 +27,8 @@ class TwoA extends BaseStroe {
     @observable twoData = [];
 
     // 改变store的同步方法
-    @action method() {
-      this.total = 123;
+    @action method(params) {
+      this.total = params;
       console.log('这是一个同步方法');
     }
 
