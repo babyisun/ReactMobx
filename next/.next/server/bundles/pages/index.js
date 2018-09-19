@@ -245,7 +245,7 @@ ajax.interceptors.response.use((response) => {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__Footer__ = __webpack_require__("./components/Footer.jsx");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__BasicLayout_scss__ = __webpack_require__("./components/BasicLayout.scss");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__BasicLayout_scss___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7__BasicLayout_scss__);
-var _jsxFileName = "/Users/sf/Desktop/ReactMobx/next/components/BasicLayout.jsx";
+var _jsxFileName = "/Users/haoli/work_project/ReactMobx/next/components/BasicLayout.jsx";
 
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
@@ -392,7 +392,7 @@ module.exports = {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_antd__ = __webpack_require__("antd");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_antd___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_antd__);
-var _jsxFileName = "/Users/sf/Desktop/ReactMobx/next/components/Footer.jsx";
+var _jsxFileName = "/Users/haoli/work_project/ReactMobx/next/components/Footer.jsx";
 
  // import style from './Footer.scss';
 // const { Footer } = Layout;
@@ -423,7 +423,7 @@ var Footer = function Footer() {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__src_utils_ajax__ = __webpack_require__("../src/utils/ajax.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__Header_scss__ = __webpack_require__("./components/Header.scss");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__Header_scss___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4__Header_scss__);
-var _jsxFileName = "/Users/sf/Desktop/ReactMobx/next/components/Header.jsx";
+var _jsxFileName = "/Users/haoli/work_project/ReactMobx/next/components/Header.jsx";
 
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
@@ -656,7 +656,7 @@ module.exports = {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__src_router__ = __webpack_require__("../src/router.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__Sider_scss__ = __webpack_require__("./components/Sider.scss");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__Sider_scss___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5__Sider_scss__);
-var _jsxFileName = "/Users/sf/Desktop/ReactMobx/next/components/Sider.jsx";
+var _jsxFileName = "/Users/haoli/work_project/ReactMobx/next/components/Sider.jsx";
 
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
@@ -844,7 +844,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__Home_scss__ = __webpack_require__("./pages/Home.scss");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__Home_scss___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__Home_scss__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_BasicLayout__ = __webpack_require__("./components/BasicLayout.jsx");
-var _jsxFileName = "/Users/sf/Desktop/ReactMobx/next/pages/index.jsx";
+var _jsxFileName = "/Users/haoli/work_project/ReactMobx/next/pages/index.jsx";
 
 
 

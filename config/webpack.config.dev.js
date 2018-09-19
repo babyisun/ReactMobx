@@ -122,13 +122,6 @@ module.exports = {
             formatter,
             eslintPath: require.resolve('eslint'),
 
-<<<<<<< Updated upstream
-                    },
-                    loader: require.resolve('eslint-loader'),
-                }, ],
-                include: paths.appSrc,
-                // exclude:['*/iconfont.js'],
-=======
           },
           loader: require.resolve('eslint-loader'),
         }],
@@ -148,7 +141,6 @@ module.exports = {
             options: {
               limit: 10000,
               name: 'static/media/[name].[hash:8].[ext]',
->>>>>>> Stashed changes
             },
           },
           // Process JS with Babel.
@@ -158,20 +150,6 @@ module.exports = {
             loader: require.resolve('babel-loader'),
             options: {
 
-<<<<<<< Updated upstream
-                            // This is a feature of `babel-loader` for webpack (not Babel itself).
-                            // It enables caching results in ./node_modules/.cache/babel-loader/
-                            // directory for faster rebuilds.
-                            cacheDirectory: true,
-                        },
-                    },
-                    // "postcss" loader applies autoprefixer to our CSS.
-                    // "css" loader resolves paths in CSS and adds assets as dependencies.
-                    // "style" loader turns CSS into JS modules that inject <style> tags.
-                    // In production, we use a plugin to extract that CSS to a file, but
-                    // in development "style" loader enables hot editing of CSS.
-                    {
-=======
               // This is a feature of `babel-loader` for webpack (not Babel itself).
               // It enables caching results in ./node_modules/.cache/babel-loader/
               // directory for faster rebuilds.
@@ -184,7 +162,6 @@ module.exports = {
           // In production, we use a plugin to extract that CSS to a file, but
           // in development "style" loader enables hot editing of CSS.
           /* {
->>>>>>> Stashed changes
                         test: /\.css$/,
                         use: [
                             require.resolve('style-loader'),
@@ -215,111 +192,6 @@ module.exports = {
                                 },
                             },
                         ],
-<<<<<<< Updated upstream
-                    },
-                    // 处理 Ant Design 的 less 文件
-                    {
-                        test: /\.less$/,
-                        include: paths.appNodeModules,
-                        use: [
-                            require.resolve('style-loader'),
-                            {
-                                loader: require.resolve('css-loader'),
-                                options: {
-                                    importLoaders: 2,
-                                },
-                            },
-                            {
-                                loader: require.resolve('postcss-loader'),
-                                options: {
-                                    // Necessary for external CSS imports to work
-                                    // https://github.com/facebookincubator/create-react-app/issues/2677
-                                    ident: 'postcss',
-                                    plugins: () => [
-                                        require('postcss-flexbugs-fixes'),
-                                        autoprefixer({
-                                            browsers: [
-                                                '>1%',
-                                                'last 4 versions',
-                                                'Firefox ESR',
-                                                'not ie < 9', // React doesn't support IE8 anyway
-                                            ],
-                                            flexbox: 'no-2009',
-                                        }),
-                                    ],
-                                },
-                            },
-                            {
-                                loader: 'less-loader',
-                                options: {
-                                    modifyVars: theme,
-                                    javascriptEnabled: true,
-                                },
-                            },
-                        ],
-                    },
-                    // 处理 sass
-                    {
-                        test: /\.scss$/,
-                        include: paths.appSrc,
-                        use: ['css-hot-loader'].concat(ExtractTextPlugin.extract({
-                                fallback: require.resolve('style-loader'),
-                                use: [{
-                                        loader: require.resolve('css-loader'),
-                                        options: {
-                                            importLoaders: 2,
-                                            modules: true,
-                                            localIdentName: '[name]__[local]--[hash:base64:5]',
-                                            camelCase: 'dashes',
-                                            sourceMap: true,
-                                        },
-                                    },
-                                    {
-                                        loader: require.resolve('postcss-loader'),
-                                        options: {
-                                            // Necessary for external CSS imports to work
-                                            // https://github.com/facebookincubator/create-react-app/issues/2677
-                                            ident: 'postcss',
-                                            plugins: () => [
-                                                require('postcss-flexbugs-fixes'),
-                                                autoprefixer({
-                                                    browsers: [
-                                                        '>1%',
-                                                        'last 4 versions',
-                                                        'Firefox ESR',
-                                                        'not ie < 9', // React doesn't support IE8 anyway
-                                                    ],
-                                                    flexbox: 'no-2009',
-                                                }),
-                                            ],
-                                        },
-                                    },
-                                    {
-                                        loader: require.resolve('sass-loader'),
-                                    },
-                                ],
-                            }),
-                            // Note: this won't work without `new ExtractTextPlugin()` in `plugins`.
-                        ),
-                    },
-                    // "file" loader makes sure those assets get served by WebpackDevServer.
-                    // When you `import` an asset, you get its (virtual) filename.
-                    // In production, they would get copied to the `build` folder.
-                    // This loader doesn't use a "test" so it will catch all modules
-                    // that fall through the other loaders.
-                    {
-                        // Exclude `js` files to keep "css" loader working as it injects
-                        // its runtime that would otherwise processed through "file" loader.
-                        // Also exclude `html` and `json` extensions so they get processed
-                        // by webpacks internal loaders.
-                        exclude: [/\.(js|jsx|mjs)$/, /\.html$/, /\.json$/, /\.md$/],
-                        loader: require.resolve('file-loader'),
-                        options: {
-                            name: 'static/media/[name].[hash:8].[ext]',
-                        },
-                    },
-                ],
-=======
                     }, */
           // 处理 Ant Design 的 less 文件
           {
@@ -420,7 +292,6 @@ module.exports = {
             loader: require.resolve('file-loader'),
             options: {
               name: 'static/media/[name].[hash:8].[ext]',
->>>>>>> Stashed changes
             },
           },
         ],

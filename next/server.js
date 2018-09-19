@@ -8,7 +8,7 @@ app.prepare().then(() => {
   const server = express();
 
   server.get('/list', (req, res) => {
-    const actualPage = '/index/:id';
+    const actualPage = '/index';
     const queryParams = {
       title: req.params.id,
     };
@@ -19,7 +19,7 @@ app.prepare().then(() => {
 
   server.listen(3000, (err) => {
     if (err) throw err;
-    console.log('> Ready on http://localhost:3002');
+    console.log('> Ready on http://localhost:3000');
   });
 }).catch((ex) => {
   console.error(ex.stack);
