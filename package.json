@@ -9,7 +9,12 @@
     }
   },
   "dependencies": {
+<<<<<<< Updated upstream
     "antd": "^3.9.1",
+=======
+    "@zeit/next-sass": "^0.2.0",
+    "antd": "^3.6.4",
+>>>>>>> Stashed changes
     "autoprefixer": "7.1.6",
     "axios": "^0.18.0",
     "babel-core": "6.26.0",
@@ -52,6 +57,9 @@
     "mobx-react-devtools": "^5.0.1",
     "mockjs": "^1.0.1-beta3",
     "moment": "^2.22.2",
+    "next": "^6.1.2",
+    "next-compose-plugins": "^2.1.1",
+    "next-optimized-images": "^1.4.1",
     "node-sass": "^4.9.3",
     "nodemon": "^1.17.5",
     "object-assign": "4.1.1",
@@ -81,7 +89,8 @@
     "build:test": "NODE_ENV=test BABEL_ENV=production node scripts/build.js",
     "test": "node scripts/test.js --env=jsdom",
     "mock": "nodemon --watch mock mock/server.js",
-    "start:mock": "concurrently \"nodemon --watch mock mock/server.js\" \"node scripts/start.js\""
+    "start:mock": "concurrently \"nodemon --watch mock mock/server.js\" \"node scripts/start.js\"",
+    "dev": "node next/server.js"
   },
   "devDependencies": {
     "enzyme": "^3.5.0",

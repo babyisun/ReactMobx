@@ -1,0 +1,88 @@
+$menu-item-color: #818d99;
+$menu-item-active-bg: #1890ff;
+.sider {
+    :global {
+        .ant-menu {
+            .ant-menu-submenu,
+            .ant-menu-item a {
+                background-position: 30px 15px;
+                background-size: 18px 18px;
+                background-repeat: no-repeat;
+            }
+            .ant-menu-submenu {
+                &:hover,
+                &.ant-menu-submenu-selected {
+                    color: #fff !important;
+                    .ant-menu-submenu-arrow {
+                        &::before,
+                        &::after {
+                            background: #fff !important;
+                        }
+                    }
+                }
+                .ant-menu-submenu-arrow,
+                &.ant-menu-submenu-open .ant-menu .ant-menu-submenu-arrow {
+                    right: 28px;
+                    margin-top: 1px;
+                    &::before,
+                    &::after {
+                        width: 8px;
+                        background: #818d99!important;
+                    }
+                    &::before {
+                        transform: rotate(-45deg) translateX(3px);
+                    }
+                    &:after {
+                        transform: rotate(45deg) translateX(-3px);
+                    }
+                }
+                &.ant-menu-submenu-open .ant-menu-submenu-arrow,
+                &.ant-menu-submenu-open .ant-menu .ant-menu-submenu-open .ant-menu-submenu-arrow {
+                    margin-top: 0;
+                    &::before {
+                        transform: rotate(45deg) translateX(3px);
+                    }
+                    &:after {
+                        transform: rotate(-45deg) translateX(-3px);
+                    }
+                }
+            }
+            .ant-menu-item {
+                i {
+                    line-height: 50px;
+                    height: 50px;
+                    padding-left: 40px;
+                    top: 16px;
+                    left: 0;
+                    z-index: 1;
+                    position: absolute;
+                }
+                a {
+                    color: $menu-item-color;
+                    text-decoration: none;
+                    width: 100%;
+                    display: inline-block;
+                    padding-left: 66px;
+                    &:hover{
+                        color: #fff;
+                    }
+                    &.active {
+                        color: #fff;
+                        background-color: $menu-item-active-bg;
+                    }
+                    // &.active {
+                    //     background-color: $menu-item-active-bg;
+                    // }
+                }
+            }
+        }
+    }
+    .remind {
+        display: inline-block;
+        width: 8px;
+        height: 8px;
+        background-color: #f74052;
+        border-radius: 50%;
+        transform: translate3d(0, -8px, 0);
+    }
+}
