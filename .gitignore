@@ -31,3 +31,6 @@ jsconfig.json
 # SELF
 git.sh
 git2online.sh
+
+# next
+/next/.next
