@@ -86,7 +86,7 @@
     "test": "node scripts/test.js --env=jsdom",
     "mock": "nodemon --watch mock mock/server.js",
     "start:mock": "concurrently \"nodemon --watch mock mock/server.js\" \"node scripts/start.js\"",
-    "dev": "node next/server.js"
+    "server": "node next/server.js"
   },
   "devDependencies": {
     "enzyme": "^3.5.0",
