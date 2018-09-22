@@ -45,11 +45,11 @@ export const asyncAction = (currClass, actionName) => {
     // },
   });
   const old = currClass[actionName];
-  currClass[actionName] = async () => {
+  currClass[actionName] = async (...args) => {
     runInAction(() => {
       currClass[`${actionName}${SUFFIX.LOADING}`] = true;
     });
-    const data = await old();
+    const data = await old(...args);
     runInAction(() => {
       currClass[`${actionName}${SUFFIX.LOADING}`] = false;
     });
