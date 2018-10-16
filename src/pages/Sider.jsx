@@ -1,14 +1,17 @@
 import React from 'react';
 import { Layout, Menu, Icon } from 'antd';
+import { observer, inject } from 'mobx-react';
 import { withRouter, NavLink } from 'react-router-dom';
 import router from '../router';
 import styles from './Sider.scss';
 
 const { SubMenu, Item } = Menu;
 
+@inject('baseStore')
+@observer
 class Sider extends React.Component {
   render() {
-    const { collapsed, onCollapse, location: { pathname } } = this.props;
+    const { collapsed, onCollapse, location: { pathname }, baseStore } = this.props;
     const path = pathname.split('/');
     const defaultOpen = path.length > 1 ? path[1] : '';
     console.log(defaultOpen);
@@ -17,7 +20,7 @@ class Sider extends React.Component {
         collapsed={collapsed} onCollapse={onCollapse}>
         <Menu theme="dark" mode="inline" defaultOpenKeys={[`/${defaultOpen}`]} defaultSelectedKeys={[pathname]}>
           {
-            router.map(item => !item.children
+            router.map(item => baseStore.hasAuth(item.code) ? !item.showChildren
               ? (
                 <Item key={item.path} className={item.path.slice(1)}>
                   <div>
@@ -50,7 +53,7 @@ class Sider extends React.Component {
                     ))
                   }
                 </SubMenu>
-              ))
+              ) : null)
           }
         </Menu>
       </Layout.Sider>
